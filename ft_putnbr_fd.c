@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybenzidi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/02 20:06:37 by ybenzidi          #+#    #+#             */
-/*   Updated: 2024/11/02 20:06:41 by ybenzidi         ###   ########.fr       */
+/*   Created: 2024/11/02 20:02:52 by ybenzidi          #+#    #+#             */
+/*   Updated: 2024/11/02 20:02:53 by ybenzidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+void    ft_putnbr_fd(int n, int fd)
 {
-	char	*dest;
-	int		lentsrc;
-	int		i;
-
-	lentsrc = ft_strlen(src) + 1;
-	dest = (char *)malloc(lentsrc * sizeof(char));
-	i = 0;
-	while (i < lentsrc)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+    char digit;
+    
+    if (n == -2147483648)
+        write(fd, "-2147483648", 11);
+    else if (n < 0)
+    {
+        write(fd, "-", 1);
+        ft_putnbr_fd(-n, fd);
+    }
+    else
+    {
+        if (n > 9)
+        {
+            ft_putnbr_fd(n / 10, fd);
+        }
+        digit = (n % 10) + '0';
+        write(fd, &digit, 1);
+    }
 }
-/*#include <stdio.h>
-int main ()
-{
-	char array[] = "yasserbenzidiya";
-	printf("%s",ft_strdup(array));
-}*/
