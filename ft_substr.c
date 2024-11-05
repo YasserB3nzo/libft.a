@@ -10,41 +10,39 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 char *ft_substr(char const *s, unsigned int start,size_t len)
 {
     char *ptr ;
     int l = len ; 
     int i = 0;
 
-    ptr = (char *)malloc(len);
-
-    while(i<l)
+    ptr = (char *)malloc((len)+1);
+    if(!ptr)
+        return NULL;
+    while(i<l && s[start])
     {
         ptr[i]=s[start];
         i++;
         start++;
     }
+    ptr[i]='\0';
     return (ptr);
 }
-// #include <stdio.h>
-// int main()
-// {
+/*#include <stdio.h>
+int main()
+{
 
-//     int pos , len = 0;
+     int pos , len = 0;
 
-//     // Testcase1
-//     char string[14] = "geeksforgeeks";
-//     char *p;
+    char str[14] = "geeksforgeeks";
+     char *p;
 
-//     // Initialize pos, len i.e., starting
-//     // index and len upto which we have to
-//     // get substring respectively.
-//     pos = 6;
-//     len = 5;
-//     printf("String: %s ", string);
-//     p=ft_substr(string,pos,len);
-//     printf("\nsubstring is: %s ",p);
+     pos = 6;
+     len = 5;
+     printf("String: %s ", str);
+     p=ft_substr(str, 7, 10);
+     printf("\nsubstring is: %s ",p);
 
-//     return 0;
-// }
+     return 0;
+}*/

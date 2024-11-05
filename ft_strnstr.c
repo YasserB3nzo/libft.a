@@ -15,6 +15,8 @@ char 	*ft_strnstr (char *s1, char *s2, size_t n)
 {
     size_t i = 0;
     int l = ft_strlen(s2);
+    if(s2[i]== '\0')
+        return(s1);
     while(i<n && s1[i])
     {
         if(s1[i]==s2[0] && (i+l)<n)
@@ -29,9 +31,6 @@ char 	*ft_strnstr (char *s1, char *s2, size_t n)
 /*#include<stdio.h>
 int main()
 {
-    char *s1="yasser benzidiya kay jrb lcode";
-    char *s2="kay";
-    size_t n = 11;
-    char *res = ft_strnstr(s1,s2,n);
+    char *res = ft_strnstr("lorem ipsum dolor sit amet", "", 10);
     printf("%s",res);
 }*/

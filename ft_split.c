@@ -12,22 +12,23 @@
 
 #include "libft.h"
 
-static int	ft_count_words(char *array, char sep)
-{
-	int	count = 0, i = 0;
-	while (array[i] == sep)
-		i++;
-	while (array[i])
-	{
-		if (array[i] == sep || array[i + 1] == '\0')
-		{
-			while (array[i] == sep)
-				i++;
-			count++;
-		}
-		i++;
-	}
-	return (count);
+static int ft_count_words(char *array, char sep) {
+    int count = 0;
+    int i = 0;
+
+    while (array[i]) {
+        // Skip any leading separators before each word
+        while (array[i] == sep)
+            i++;
+        // Check if we're at the start of a new word
+        if (array[i] != '\0') {
+            count++;
+            // Skip over the current word
+            while (array[i] && array[i] != sep)
+                i++;
+        }
+    }
+    return count;
 }
 
 static char	*ft_copy_word(const char *s, int start, int end)
@@ -42,7 +43,7 @@ static char	*ft_copy_word(const char *s, int start, int end)
 	return (word);
 }
 
-void free_split(char **str)
+static void free_split(char **str)
 {
     int i;
     i=0;
@@ -80,11 +81,11 @@ char	**ft_split(char const *s, char c)
 	return (ptr);
 }
 
-#include<stdio.h>
+/*#include<stdio.h>
 int main()
 {
    char car[] = "yasser$benzidiya$hafssa";
-   char **spli = ft_split(car, '$'); 
+   char **spli = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultricies diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.", 'i'); 
    int i = 0;
    while (spli[i] != NULL)
    {
@@ -92,4 +93,4 @@ int main()
        i++;
    }
    return 0;
-}
+}*/

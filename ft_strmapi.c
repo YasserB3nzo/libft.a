@@ -13,13 +13,6 @@
 
 #include"libft.h"
 
-
-// char f(unsigned int i,char c )
-// {
-//     (void)i;
-//     return ft_toupper(c);
-// }
-
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
     char *ptr;
@@ -35,11 +28,3 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     ptr[i]= '\0';
     return (ptr);
 }
-// #include<stdio.h>
-// int main ()
-// {
-//     char s[] = "sir 3lah";
-//     char *p = ft_strmapi(s,f);
-//     puts(p);
-//     free(p);
-// }

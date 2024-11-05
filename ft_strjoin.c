@@ -21,7 +21,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	len = 0;
 	start = 0;
 	index = 0;
-	len = ft_strlen(s1) + ft_strlen(s2);
+	len = ft_strlen(s1) + ft_strlen(s2)+1;
 	ptr = (char *)malloc(len);
 	while (s1[start])
 	{
@@ -39,11 +39,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ptr[index] = '\0';
 	return (ptr);
 }
-#include <stdio.h>
+/*#include <stdio.h>
 
 int	main(void)
 {
 	char *str;
-	str = ft_strjoin("yasser", "benzidiya");
+	str = ft_strjoin("\0", "benzidiya");
 	printf("%s", str);
-}
+}*/
