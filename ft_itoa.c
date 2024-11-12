@@ -12,12 +12,13 @@
 
 
 #include "libft.h"
-#include <stdlib.h>
-#include <limits.h>
-
 static int len_n(int n)
 {
-    int l = (n <= 0) ? 1 : 0; // Start with 1 if n is 0 or negative (for the '-' or '0' character)
+   int l;
+    if (n<0)
+        l = 1;
+    else
+        l = 0;
     while (n != 0)
     {
         l++;
@@ -30,7 +31,7 @@ char *ft_itoa(int n)
 {
     int l = len_n(n);
     char *ptr = (char *)malloc((l + 1) * sizeof(char));
-    unsigned int num;
+    unsigned int num = n;
 
     if (!ptr)
         return NULL;
@@ -44,10 +45,6 @@ char *ft_itoa(int n)
     {
         ptr[0] = '-';
         num = -n;
-    }
-    else
-    {
-        num = n;
     }
     while (num > 0)
     {

@@ -12,20 +12,23 @@
 
 #include "libft.h"
 
-void	*ft_memcpy(void *to, const void *from, size_t numBytes)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned char		*dest;
-	const unsigned char	*src;
+	unsigned char	*d;
+	unsigned char	*s;
+	size_t			i;
 
-	dest = to;
-	src = from;
-	while (numBytes--)
+	i = 0;
+	d = (unsigned char *)dst;
+	s = (unsigned char *)src;
+	if (!dst && !src)
+		return (NULL);
+	while (i < n && d != s)
 	{
-		*dest = *src;
-		dest++;
-		src++;
+		d[i] = s[i];
+		i++;
 	}
-	return (to);
+	return (dst);
 }
 /*
 #include <stdio.h>
@@ -33,15 +36,18 @@ void	*ft_memcpy(void *to, const void *from, size_t numBytes)
 
 int	main(void)
 {
-	char	str1[] = "Geeks";
-	char	str2[] = "Quiz";
+	//char str1[] = "Geeks";
+    //char str2[] = "Quiz";
+    char *s=NULL;
+    puts("str1 before memcpy ");
+    puts(s);
 
-	puts("str1 before memcpy ");
-	puts(str1);
-	// Copies contents of str2 to str1
-	ft_memcpy(str1, str2, sizeof(str2));
-	puts("\nstr1 after memcpy ");
-	puts(str1);
-	return (0);
+    // Copies contents of str2 to str1
+    s=ft_memcpy(" ", "yasser",5);
+
+    puts("\nstr1 after memcpy ");
+    puts(s);
+
+    return 0;
 }
 */

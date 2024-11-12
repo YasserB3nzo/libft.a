@@ -14,24 +14,54 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t				i;
-	unsigned char		temp[n];
-	const unsigned char	*s;
 	unsigned char		*d;
+	const unsigned char	*s;
 
-    s=src;
-	d = dest;
-	i = 0;
-	while (i < n)
+	if (dest == src || n == 0)
+		return (dest);
+	
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
+
+	if (d > s && d < s + n)
 	{
-		temp[i] = s[i];
-		i++;
+		while (n--)
+			d[n] = s[n];
 	}
-	i = 0;
-	while (i < n)
+	else
 	{
-		d[i] = temp[i];
-		i++;
+		for (size_t i = 0; i < n; i++)
+			d[i] = s[i];
 	}
 	return (dest);
 }
+/*
+#include <stdio.h>
+#include <string.h>
+#include "libft.h"
+
+int main()
+{
+    char str1[] = "Hello, World!";
+    char str2[] = "Testing memmove with overlap.";
+    char str3[] = "Testing memmove with overlap.";
+
+    printf("Original str1: %s\n", str1);
+
+    // Basic memmove example: non-overlapping regions
+    ft_memmove(str1 + 7, str1, 5);
+    printf("After ft_memmove (non-overlapping): %s\n", str1);
+
+    // Overlapping case: copying forward within the same string
+    printf("Original str2 (for overlap test): %s\n", str2);
+    ft_memmove(str2 + 8, str2, 10);
+    printf("After ft_memmove (overlapping forward): %s\n", str2);
+
+    // Overlapping case: copying backward within the same string
+    printf("Original str3 (for overlap test): %s\n", str3);
+    ft_memmove(str3, str3 + 8, 10);
+    printf("After ft_memmove (overlapping backward): %s\n", str3);
+
+    return 0;
+}
+*/
