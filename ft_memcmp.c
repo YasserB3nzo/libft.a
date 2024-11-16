@@ -2,9 +2,12 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ybenzidi <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
+/*                                                    +:+ +:+
+	+:+     */
+/*   By: ybenzidi <marvin@42.fr>                    +#+  +:+
+	+#+        */
+/*                                                +#+#+#+#+#+
+	+#+           */
 /*   Created: 2024/11/02 20:05:19 by ybenzidi          #+#    #+#             */
 /*   Updated: 2024/11/02 20:05:21 by ybenzidi         ###   ########.fr       */
 /*                                                                            */
@@ -14,9 +17,11 @@
 
 int	ft_memcmp(const void *ptr1, const void *ptr2, size_t num)
 {
-	const unsigned char	*ptr = (const unsigned char *)ptr1;
-	const unsigned char	*p = (const unsigned char *)ptr2;
+	unsigned char	*ptr;
+	unsigned char	*p;
 
+	ptr = (unsigned char *)ptr1;
+	p = (unsigned char *)ptr2;
 	while (num--)
 	{
 		if (*ptr != *p)

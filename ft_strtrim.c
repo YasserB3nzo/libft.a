@@ -2,16 +2,18 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ybenzidi <ybenzidi@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
+/*                                                    +:+ +:+        
+	+:+     */
+/*   By: ybenzidi <ybenzidi@student.42.fr>          +#+  +:+      
+	+#+        */
+/*                                                +#+#+#+#+#+  
+	+#+           */
 /*   Created: 2024/10/29 17:41:45 by ybenzidi          #+#    #+#             */
 /*   Updated: 2024/10/31 14:52:21 by ybenzidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	is_in_set(char c, const char *set)
 {
@@ -26,9 +28,9 @@ static int	is_in_set(char c, const char *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		start;
-	int		end;
-	char	*trimmed_str;
+	int start;
+	int end;
+	char *trimmed_str;
 
 	if (!s1 || !set)
 		return (NULL);
@@ -49,7 +51,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (trimmed_str);
 }
 /*
-#include<stdio.h>
+#include <stdio.h>
+
 int main ()
 {
    char *s1 = "isir 3lahi5i5";
@@ -58,4 +61,3 @@ int main ()
    char *p = ft_strtrim(s1, set);
    printf("%s",p);
 }*/
-

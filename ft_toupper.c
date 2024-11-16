@@ -2,23 +2,27 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ybenzidi <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
+/*                                                    +:+ +:+        
+	+:+     */
+/*   By: ybenzidi <marvin@42.fr>                    +#+  +:+      
+	+#+        */
+/*                                                +#+#+#+#+#+  
+	+#+           */
 /*   Created: 2024/11/02 20:10:06 by ybenzidi          #+#    #+#             */
 /*   Updated: 2024/11/02 20:10:08 by ybenzidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
-int ft_toupper(int c)
+#include "libft.h"
+
+int	ft_toupper(int c)
 {
-    if(c>='a' && c<='z')
-        c-=32;
-    return c;
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
+	return (c);
 }
 /*#include <stdio.h>
-int main()
+int	main(void)
 {
-    printf("%c",toupper('9'));
+	printf("%c",toupper('9'));
 }*/

@@ -11,39 +11,49 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-char *ft_substr(char const *s, unsigned int start,size_t len)
+
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    char *ptr ;
-    int l = len ; 
-    int  i = 0;
-    if (start >= ft_strlen(s))
+	char	*ptr;
+	size_t	str_len;
+	size_t	i;
+
+	if (!s) 
+		return (NULL);
+	str_len = ft_strlen(s);
+	if (start >= str_len) 
 		return (ft_strdup(""));
-    ptr = (char *)malloc((len)+1);
-    if(!ptr)
-        return NULL;
-    while(i<l && s[start])
-    {
-        ptr[i]=s[start];
-        i++;
-        start++;
-    }
-    ptr[i]='\0';
-    return (ptr);
+	if (len > str_len - start)
+		len = str_len - start;
+	ptr = (char *)malloc(len + 1);
+	if (!ptr)
+		return (NULL);
+	i = 0;
+	while (i < len && s[start])
+	{
+		ptr[i] = s[start];
+		i++;
+		start++;
+	}
+	ptr[i] = '\0';
+	return (ptr);
 }
-/*#include <stdio.h>
-int main()
-{
 
-     int pos , len = 0;
+// #include <stdio.h>
+// int main()
+// {
 
-    char str[14] = "geeksforgeeks";
-     char *p;
+//      int pos , len = 0;
 
-     pos = 6;
-     len = 5;
-     printf("String: %s ", str);
-     p=ft_substr(str, 7, 10);
-     printf("\nsubstring is: %s ",p);
+//     char *str = "yasserbenzidiya";
+//      char *p;
 
-     return 0;
-}*/
+//      pos = 6;
+//      len = 5;
+//      printf("String: %s ", str);
+//      p=ft_substr("hola", 1, 8);
+//      printf("\nsubstring is: %s ",p);
+
+//      return 0;
+// }

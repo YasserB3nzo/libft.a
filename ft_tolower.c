@@ -2,23 +2,27 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ybenzidi <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
+/*                                                    +:+ +:+        
+	+:+     */
+/*   By: ybenzidi <marvin@42.fr>                    +#+  +:+      
+	+#+        */
+/*                                                +#+#+#+#+#+  
+	+#+           */
 /*   Created: 2024/11/02 20:09:58 by ybenzidi          #+#    #+#             */
 /*   Updated: 2024/11/02 20:09:59 by ybenzidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
-int ft_tolower(int c)
+#include "libft.h"
+
+int	ft_tolower(int c)
 {
-    if(c>='A' && c<='Z')
-        return(c+32);
-    return c;
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }
 /*#include <stdio.h>
-int main()
+int	main(void)
 {
-    printf("%c",ft_tolower('M'));
+	printf("%c",ft_tolower('M'));
 }*/
