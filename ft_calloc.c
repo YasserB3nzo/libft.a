@@ -2,14 +2,11 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+
-	+:+     */
-/*   By: ybenzidi <ybenzidi@student.42.fr>          +#+  +:+
-	+#+        */
-/*                                                +#+#+#+#+#+
-	+#+           */
-/*   Created: 2024/10/28 13:55:52 by ybenzidi          #+#    #+#             */
-/*   Updated: 2024/10/31 23:13:58 by ybenzidi         ###   ########.fr       */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ybenzidi <ybenzidi@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 13:55:38 by ybenzidi          #+#    #+#             */
+/*   Updated: 2024/11/16 13:55:38 by ybenzidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +17,9 @@ void	*ft_calloc(size_t num_elements, size_t element_size)
 	void	*ptr;
 	size_t	total_size;
 
-	if (num_elements == 0 || element_size == 0)
-	{
-		ptr = malloc(1);
-		if (ptr)
-			ft_memset(ptr, 0, 1);
-		return (ptr);
-	}
 	total_size = num_elements * element_size;
+	if (total_size == 0 && total_size >  SIZE_MAX)
+		return (NULL);
 	ptr = malloc(total_size);
 	if (!ptr)
 		return (NULL);

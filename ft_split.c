@@ -2,23 +2,22 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+
-	+:+     */
-/*   By: ybenzidi <ybenzidi@student.42.fr>          +#+  +:+
-	+#+        */
-/*                                                +#+#+#+#+#+
-	+#+           */
-/*   Created: 2024/10/29 18:22:10 by ybenzidi          #+#    #+#             */
-/*   Updated: 2024/10/31 23:30:43 by ybenzidi         ###   ########.fr       */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ybenzidi <ybenzidi@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 13:56:00 by ybenzidi          #+#    #+#             */
+/*   Updated: 2024/11/16 13:56:00 by ybenzidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static int ft_count_words(char *array, char sep) {
-    int count = 0;
-    int i = 0;
+    int count;
+    int i;
 
+    count = 0;
+    i = 0;
     while (array[i]) {
         // Skip any leading separators before each word
         while (array[i] == sep)
@@ -37,7 +36,7 @@ static int ft_count_words(char *array, char sep) {
 static char	*ft_copy_word(const char *s, int start, int end)
 {
 	char	*word = malloc((end - start + 1) * sizeof(char));
-	int		i = 0;
+	int		i = 0 ;
 	if (!word)
         return NULL;
 	while (start < end)

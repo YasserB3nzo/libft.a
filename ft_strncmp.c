@@ -2,14 +2,11 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+        
-	+:+     */
-/*   By: ybenzidi <marvin@42.fr>                    +#+  +:+      
-	+#+        */
-/*                                                +#+#+#+#+#+  
-	+#+           */
-/*   Created: 2024/11/02 20:09:05 by ybenzidi          #+#    #+#             */
-/*   Updated: 2024/11/02 20:09:07 by ybenzidi         ###   ########.fr       */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ybenzidi <ybenzidi@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 14:01:32 by ybenzidi          #+#    #+#             */
+/*   Updated: 2024/11/16 17:33:49 by ybenzidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +14,9 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t i = 0;
+	size_t	i;
+
+	i = 0;
 	while (s1[i] && s2[i] && i < n)
 	{
 		if (s1[i] != s2[i])
@@ -25,11 +24,10 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		i++;
 	}
 	if (i == n)
-	{
 		return (0);
-	}
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
+
 /*#include<stdio.h>
 int	main(void)
 {

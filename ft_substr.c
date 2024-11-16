@@ -12,17 +12,16 @@
 
 #include "libft.h"
 
-
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*ptr;
 	size_t	str_len;
 	size_t	i;
 
-	if (!s) 
+	if (!s)
 		return (NULL);
 	str_len = ft_strlen(s);
-	if (start >= str_len) 
+	if (start >= str_len)
 		return (ft_strdup(""));
 	if (len > str_len - start)
 		len = str_len - start;

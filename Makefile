@@ -2,7 +2,7 @@
 NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-AR = ar rcs
+AR = ar rc
 RM = rm -f
 
 # Source files
@@ -22,7 +22,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(AR) $(NAME) $(OBJ)
 
-%.o: %.c libft.h
+ %.o: %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
