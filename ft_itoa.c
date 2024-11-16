@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybenzidi <ybenzidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/16 18:11:16 by ybenzidi          #+#    #+#             */
-/*   Updated: 2024/11/16 18:11:16 by ybenzidi         ###   ########.fr       */
+/*   Created: 2024/11/16 22:49:16 by ybenzidi          #+#    #+#             */
+/*   Updated: 2024/11/16 22:49:16 by ybenzidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	len_n(int n)
 {
-	int l;
+	int	l;
 
 	l = 0;
 	if (n <= 0)
@@ -27,17 +27,27 @@ static int	len_n(int n)
 	return (l);
 }
 
+static unsigned int	check_sign(int num)
+{
+	int	s;
+
+	s = -1;
+	if (num < 0)
+		return ((unsigned int)(num * s));
+	return ((unsigned int)num);
+}
+
 char	*ft_itoa(int n)
 {
-	int             l;
-	char            *ptr ;
-	unsigned int    num = (n < 0) ? -n : n;
+	int				l;
+	char			*ptr;
+	unsigned int	num;
 
-    l = len_n(n);
-    ptr = (char *) malloc ((l+1)*sizeof(char));
+	l = len_n(n);
+	ptr = (char *)malloc((l + 1) * sizeof(char));
+	num = check_sign(n);
 	if (!ptr)
 		return (NULL);
-
 	ptr[l] = '\0';
 	if (n == 0)
 	{
@@ -51,7 +61,6 @@ char	*ft_itoa(int n)
 		ptr[--l] = (num % 10) + '0';
 		num /= 10;
 	}
-
 	return (ptr);
 }
 
