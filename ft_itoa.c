@@ -33,7 +33,7 @@ char	*ft_itoa(int n)
 	char            *ptr ;
 	unsigned int    num = (n < 0) ? -n : n;
 
-    l = len(n);
+    l = len_n(n);
     ptr = (char *) malloc ((l+1)*sizeof(char));
 	if (!ptr)
 		return (NULL);

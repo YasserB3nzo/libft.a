@@ -19,13 +19,11 @@ static int ft_count_words(char *array, char sep) {
     count = 0;
     i = 0;
     while (array[i]) {
-        // Skip any leading separators before each word
         while (array[i] == sep)
             i++;
-        // Check if we're at the start of a new word
-        if (array[i] != '\0') {
+        if (array[i] != '\0') 
+        {
             count++;
-            // Skip over the current word
             while (array[i] && array[i] != sep)
                 i++;
         }
