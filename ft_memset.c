@@ -6,7 +6,7 @@
 /*   By: ybenzidi <ybenzidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 13:59:01 by ybenzidi          #+#    #+#             */
-/*   Updated: 2024/11/16 18:09:54 by ybenzidi         ###   ########.fr       */
+/*   Updated: 2024/11/17 21:25:35 by ybenzidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -27,17 +27,15 @@ void	*ft_memset(void *ptr, int value, size_t numbyte)
 	}
 	return (ptr);
 }
-/*include <stdio.h>
 
-int	main(void) {
-	char str[50] = "Hello, World!";
-	printf("Before memset: %s\n", str);
+// #include <stdio.h>
 
-	// Fill the first 5 characters with '-'
-	ft_memset(str, '-', 5);
+// int	main(void) {
+// 	int a =  0;
+// 	ft_memset(&a,255,4);
+// 	ft_memset(&a,0b11111011,1);
 
-	printf("After memset: %s\n", str);
-	return (0);
-}
+// 	printf("Before memset: %d\n", a);
 
-*/
+// 	return (0);
+// }

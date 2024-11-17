@@ -6,7 +6,7 @@
 /*   By: ybenzidi <ybenzidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 14:01:50 by ybenzidi          #+#    #+#             */
-/*   Updated: 2024/11/16 14:01:50 by ybenzidi         ###   ########.fr       */
+/*   Updated: 2024/11/17 21:28:13 by ybenzidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(trimmed_str, s1 + start, end - start + 2);
 	return (trimmed_str);
 }
-/*
-#include <stdio.h>
 
-int main ()
-{
-   char *s1 = "isir 3lahi5i5";
-   char *set = "i5";
+// #include <stdio.h>
 
-   char *p = ft_strtrim(s1, set);
-   printf("%s",p);
-}*/
+// int main ()
+// {
+//   // char *s1 = "isir 3lah5";
+//    char *set = "i5";
+
+//    char *p = ft_strtrim(NULL, set);
+//    printf("%s",p);
+// }

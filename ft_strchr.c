@@ -24,5 +24,12 @@ char	*ft_strchr(const char *s, int i)
 	}
 	if (c == '\0')
 		return ((char *)s);
-	return (0);
+	return (NULL);
 }
+// #include<stdio.h>
+// int main()
+// {
+// 	char s[]="yasserbenzidiya";
+// 	printf("%s\n",ft_strchr(s,'8'));
+// 	printf("%s",strchr(s,'8'));
+// }

@@ -6,7 +6,7 @@
 /*   By: ybenzidi <ybenzidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 13:58:49 by ybenzidi          #+#    #+#             */
-/*   Updated: 2024/11/16 18:08:58 by ybenzidi         ###   ########.fr       */
+/*   Updated: 2024/11/17 21:28:36 by ybenzidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,25 +30,21 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-/*
-#include <stdio.h>
-#include <string.h>
 
+// #include <stdio.h>
+// #include <string.h>
+// int	main(void)
+// {	
+// 	char *s="yasser";
+// 	puts("str1 before memcpy ");
+// 	puts(s);
 
-int	main(void)
-{
-	//char str1[] = "Geeks";
-	//char str2[] = "Quiz";
-	char *s=NULL;
-	puts("str1 before memcpy ");
-	puts(s);
+// 	s=memcpy(s,"",4);
+// 	puts("\nstr1 after memcpy ");
+// 	puts(s);
+// 	// s = ft_memcpy(s, "",4);
+// 	// puts("\nstr1 after ftmemcpy ");
+// 	// puts(s);
 
-	// Copies contents of str2 to str1
-	s=ft_memcpy(" ", "yasser",5);
-
-	puts("\nstr1 after memcpy ");
-	puts(s);
-
-	return (0);
-}
-*/
+// 	return (0);
+// }

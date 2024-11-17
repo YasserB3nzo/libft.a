@@ -6,28 +6,35 @@
 /*   By: ybenzidi <ybenzidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 13:59:51 by ybenzidi          #+#    #+#             */
-/*   Updated: 2024/11/16 17:40:08 by ybenzidi         ###   ########.fr       */
+/*   Updated: 2024/11/17 21:26:33 by ybenzidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dest, const char *src, size_t destsize)
 {
 	size_t	i;
-	int		src_lent;
 
 	i = 0;
-	src_lent = 0;
-	while (src[src_lent])
-		src_lent++;
-	if (dstsize == 0)
-		return (src_lent);
-	while (i < dstsize - 1 && src[i])
+	if (destsize)
 	{
-		dst[i] = src[i];
-		i++;
+		while (src[i] && i < destsize - 1)
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = '\0';
 	}
-	dst[i] = '\0';
-	return (src_lent);
+	return (ft_strlen(src));
 }
+// #include<stdio.h>
+// int main()
+// {
+// 	char des[4];
+// 	size_t s = 8;
+// 	//printf("%zu",ft_strlcpy(des,"benzidiya",s));
+// 	printf("\n");
+// 	printf("%zu",strlcpy(des,"benzidiya",s));
+// 	printf("\n");
+// 	printf("%s",des);

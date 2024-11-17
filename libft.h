@@ -15,12 +15,13 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <string.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 size_t	ft_strlen(const char	*str);
 int		ft_atoi(const char *nb);
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlcpy(char *dest, const char *src, size_t destsize);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -31,7 +32,7 @@ int		ft_isprint(int n);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
 
-size_t	strlcat(char *dst, const char *src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 void	*ft_memset(void *ptr, int value, size_t numbyte);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *to, const void *from, size_t numBytes);

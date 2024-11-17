@@ -11,12 +11,13 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 int	ft_atoi(const char *nb)
 {
-	int	i;
-	int	sign;
-	int	res;
+	int		i;
+	int		sign;
+	int		res;
 
 	i = 0;
 	sign = 1;
@@ -29,7 +30,7 @@ int	ft_atoi(const char *nb)
 			sign *= -1;
 		i++;
 	}
-	while (nb[i] >= '0' && nb[i] <= '9')
+	while (ft_isdigit(nb[i]))
 	{
 		res = (res * 10) + (nb[i] - '0');
 		i++;
@@ -37,9 +38,8 @@ int	ft_atoi(const char *nb)
 	return (res * sign);
 }
 
-/*#include <stdio.h>
-int	main(void)
-{
-	printf("%d",ft_atoi("+1245abcd124"));
-
-}*/
+// int	main(void)
+// {
+// 	printf("%d\n",ft_atoi(NULL));
+// 	//printf("%d",atoi(NULL));
+// }

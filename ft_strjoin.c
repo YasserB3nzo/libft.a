@@ -6,7 +6,7 @@
 /*   By: ybenzidi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 20:06:56 by ybenzidi          #+#    #+#             */
-/*   Updated: 2024/11/16 17:57:38 by ybenzidi         ###   ########.fr       */
+/*   Updated: 2024/11/17 21:26:04 by ybenzidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	len = 0;
 	start = 0;
 	index = 0;
+	if (!s1 || !s2)
+		return (NULL);
 	len = ft_strlen(s1) + ft_strlen(s2)+1;
 	ptr = (char *) malloc (len);
 	if (!ptr)

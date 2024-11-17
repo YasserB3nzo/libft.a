@@ -6,7 +6,7 @@
 /*   By: ybenzidi <ybenzidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 14:01:07 by ybenzidi          #+#    #+#             */
-/*   Updated: 2024/11/16 17:34:50 by ybenzidi         ###   ########.fr       */
+/*   Updated: 2024/11/17 21:27:03 by ybenzidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 
 	i = 0;
+	if (!s || !f)
+		return (NULL);
 	ptr = malloc(ft_strlen(s) + 1);
 	if (!ptr)
 		return (NULL);

@@ -30,3 +30,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[ldst + i] = '\0';
 	return (ldst + lsrc);
 }
+// #include <stdio.h>
+// int main()
+// {
+// 	char dest[5] = "okok";
+// 	char src[] = "  exemple";
+// 	printf("%zu\n",(ft_strlcat(dest,src,2)));
+// 	//printf("%zu",(strlcat(dest,src,2)));
+// 	//strlcat(dest,src,2);
+// 	printf("%s",dest);
+// }
