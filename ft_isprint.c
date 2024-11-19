@@ -18,8 +18,3 @@ int	ft_isprint(int n)
 		return (0);
 	return (1);
 }
-/*#include<stdio.h>
-int	main(void)
-{
-	printf("%d",ft_isprint('6'));
-}*/

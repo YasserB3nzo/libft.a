@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_atoi(const char *nb)
 {
@@ -37,9 +36,3 @@ int	ft_atoi(const char *nb)
 	}
 	return (res * sign);
 }
-
-// int	main(void)
-// {
-// 	printf("%d\n",ft_atoi(NULL));
-// 	//printf("%d",atoi(NULL));
-// }

@@ -29,20 +29,3 @@ int	ft_memcmp(const void *ptr1, const void *ptr2, size_t num)
 	}
 	return (0);
 }
-
-// #include <stdio.h>
-// int main ()
-// {
-//   char buffer1[] = "yasser benzidiy";
-//   char buffer2[] = "yasser benzidiy";
-
-//   int n;
-
-//   n=ft_memcmp ( buffer1, buffer2, sizeof(buffer1) );
-
-//   if (n>0) printf ("'%s' is greater than '%s'.\n",buffer1,buffer2);
-//   else if (n<0) printf ("'%s' is less than '%s'.\n",buffer1,buffer2);
-//   else printf ("'%s' is the same as '%s'.\n",buffer1,buffer2);
-
-//   return (0);
-// }

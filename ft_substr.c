@@ -38,21 +38,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ptr[i] = '\0';
 	return (ptr);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-
-//      int pos , len = 0;
-
-//     char *str = "yasserbenzidiya";
-//      char *p;
-
-//      pos = 6;
-//      len = 5;
-//      printf("String: %s ", str);
-//      p=ft_substr("hola", 1, 8);
-//      printf("\nsubstring is: %s ",p);
-
-//      return 0;
-// }

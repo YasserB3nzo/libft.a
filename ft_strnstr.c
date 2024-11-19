@@ -33,11 +33,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-
-// #include <stdio.h>
-// int	main(void) {
-// 	//char *str = "Hello, world!";
-// 	char *result = ft_strnstr("abcdefgh", "abc", 3);
-// 	printf("Found: %s\n", result);
-
-// }

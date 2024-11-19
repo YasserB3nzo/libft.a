@@ -26,10 +26,3 @@ char	*ft_strchr(const char *s, int i)
 		return ((char *)s);
 	return (NULL);
 }
-// #include<stdio.h>
-// int main()
-// {
-// 	char s[]="yasserbenzidiya";
-// 	printf("%s\n",ft_strchr(s,'8'));
-// 	printf("%s",strchr(s,'8'));
-// }

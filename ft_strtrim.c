@@ -43,14 +43,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(trimmed_str, s1 + start, end - start + 2);
 	return (trimmed_str);
 }
-
-// #include <stdio.h>
-
-// int main ()
-// {
-//   // char *s1 = "isir 3lah5";
-//    char *set = "i5";
-
-//    char *p = ft_strtrim(NULL, set);
-//    printf("%s",p);
-// }

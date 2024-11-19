@@ -31,11 +31,3 @@ char	*ft_strdup(char *src)
 	dest[i] = '\0';
 	return (dest);
 }
-// #include <stdio.h>
-// int main ()
-// {
-// 	char array[] = "yasserbenzidiya";
-// 	printf("%s",ft_strdup(" "));
-// 	//printf("%s",strdup(" "));
-
-// }
