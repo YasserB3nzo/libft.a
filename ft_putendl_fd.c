@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+#include <fcntl.h>
 void	ft_putendl_fd(char *s, int fd)
 {
 	int	i;
@@ -25,4 +25,10 @@ void	ft_putendl_fd(char *s, int fd)
 		i++;
 	}
 	write(fd, "\n", 1);
+}
+int main()
+{
+	int fd  = open("test.txt",O_RDWR , 0644);
+	ft_putendl_fd("yasserbenzidiya",fd);
+	close(fd);
 }
