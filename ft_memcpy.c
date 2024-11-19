@@ -23,10 +23,28 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	s = (unsigned char *)src;
 	if (!dst && !src)
 		return (NULL);
-	while (i < n)
+	while (i < n && d != s)
 	{
 		d[i] = s[i];
 		i++;
 	}
 	return (dst);
 }
+
+// #include <stdio.h>
+// #include <string.h>
+// int	main(void)
+// {	
+// 	char *s="yasser";
+// 	puts("str1 before memcpy ");
+// 	puts(s);
+
+// 	s=memcpy(s,"",4);
+// 	puts("\nstr1 after memcpy ");
+// 	puts(s);
+// 	// s = ft_memcpy(s, "",4);
+// 	// puts("\nstr1 after ftmemcpy ");
+// 	// puts(s);
+
+// 	return (0);
+// }

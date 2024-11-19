@@ -2,6 +2,8 @@
 NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
+AR = ar rc
+RM = rm -f
 
 # Source files
 SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c \
@@ -18,15 +20,17 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rc $(NAME) $(OBJ)
+	$(AR) $(NAME) $(OBJ)
+
+ %.o: %.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ)
+	$(RM) $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 
 .PHONY: clean
-#auto variables 

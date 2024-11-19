@@ -28,3 +28,13 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t destsize)
 	}
 	return (ft_strlen(src));
 }
+// #include<stdio.h>
+// int main()
+// {
+// 	char des[4];
+// 	size_t s = 8;
+// 	//printf("%zu",ft_strlcpy(des,"benzidiya",s));
+// 	printf("\n");
+// 	printf("%zu",strlcpy(des,"benzidiya",s));
+// 	printf("\n");
+// 	printf("%s",des);

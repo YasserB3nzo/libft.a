@@ -29,3 +29,10 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)s + ft_strlen(s));
 	return (NULL);
 }
+// #include<stdio.h>
+// int	main(void)
+// {
+// 	//const char *tst="yasser benzidiya";
+// 	//char c = '\0';
+// 	printf("%s",ft_strrchr( "yasser benzidiya", 'e'));
+// }

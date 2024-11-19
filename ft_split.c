@@ -94,9 +94,9 @@ char	**ft_split(char const *s, char c)
 	int		count_words;
 	char	**ptr;
 
+	count_words = ft_count_words((char *)s, c);
 	if (!s)
 		return (NULL);
-	count_words = ft_count_words((char *)s, c);
 	ptr = (char **) malloc ((count_words + 1) * sizeof (char *));
 	if (!ptr)
 		return (NULL);
@@ -105,3 +105,21 @@ char	**ft_split(char const *s, char c)
 	ptr[count_words] = NULL;
 	return (ptr);
 }
+
+/*#include<stdio.h>
+int	main(void)
+{
+   char car[] = "yasser$benzidiya$hafssa";
+   char **spli = ft_split("lorem ipsum dolor sit amet,
+		consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor,
+		dignissim sit amet, adipiscing nec, ultricies sed,
+		dolor. Cras elementum ultricies diam. Maecenas ligula massa, varius a,
+		semper congue, euismod non, mi.", 'i');
+   int i = 0;
+   while (spli[i] != NULL)
+   {
+		printf("spli[%d]: %s\n", i, spli[i]);
+		i++;
+   }
+   return (0);
+}*/

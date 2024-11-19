@@ -40,3 +40,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ptr[index] = '\0';
 	return (ptr);
 }
+/*#include <stdio.h>
+
+int	main(void)
+{
+	char *str;
+	str = ft_strjoin("\0", "benzidiya");
+	printf("%s", str);
+}*/

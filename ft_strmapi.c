@@ -31,16 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	ptr[i] = '\0';
 	return (ptr);
 }
-//  char add (unsigned int a, char b)
-//  {
-// 	(void)a;
-// 	b = b + 32;
-// 	return (b);
-//  }
-// int main()
-// {
-
-// 	int b = 10;
-// 	int *a  = &b;
-// 	char (*s)(unsigned int, char) = &add;
-// }
