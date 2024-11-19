@@ -34,23 +34,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	start = 0;
 	while (s1[start] && is_in_set(s1[start], set))
 		start++;
-	end = ft_strlen(s1) - 1;
+	end = ft_strlen(s1);
 	while (end > start && is_in_set(s1[end], set))
 		end--;
-	trimmed_str = (char *)malloc(end - start + 2);
+	trimmed_str = (char *)malloc(end - start + 1);
 	if (!trimmed_str)
 		return (NULL);
 	ft_strlcpy(trimmed_str, s1 + start, end - start + 2);
 	return (trimmed_str);
 }
-
-// #include <stdio.h>
-
-// int main ()
-// {
-//   // char *s1 = "isir 3lah5";
-//    char *set = "i5";
-
-//    char *p = ft_strtrim(NULL, set);
-//    printf("%s",p);
-// }

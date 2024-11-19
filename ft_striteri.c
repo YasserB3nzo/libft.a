@@ -18,10 +18,12 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 
 	i = 0;
 	if (!s || !f)
-		return (NULL);
+		return ;
 	while (s[i])
 	{
 		f(i, &s[i]);
 		i++;
 	}
 }
+// *f is a pointer to a function
+// when we call afct we refer to the address of the function

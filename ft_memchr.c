@@ -29,19 +29,16 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-// int main() {
-//     const char *str = "yasserbenzidiya";
-//     char target = 'e';
-//     size_t length = ft_strlen(str);
-
-//     const char *result = (const char *)ft_memchr(str, target, length);
-
-//     if (result != NULL) {
-//         printf("Substring starting from '%c': %s\n", target, result);
-//     } else {
-//         printf("Character '%c' not found in the string.\n", target);
-//     }
-
-//     return (0);
-// }
+// const value to be sure that the value is read only 
+// void to be able to point to any type of data 
+// ptr is not const , bcs we need to modify it
+// ptr casted to char ro compare at bye level
+// why unsigned char , bcs values more then 127 will be treated as negative values
+//
+/*#include <stdio.h>
+int main()
+{
+	const char *str = "Hello World";
+	ft_memchr(str, 'W', 11);
+	printf("%s\n", (char *)ft_memchr(str, 'W', 11));
+}*/

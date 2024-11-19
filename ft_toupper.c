@@ -18,8 +18,3 @@ int	ft_toupper(int c)
 		c -= 32;
 	return (c);
 }
-/*#include <stdio.h>
-int	main(void)
-{
-	printf("%c",toupper('9'));
-}*/

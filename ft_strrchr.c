@@ -14,27 +14,25 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	char	ch;
+	int		i;
 
+	ch = (char)c;
 	i = ft_strlen(s);
-	while (i > 0)
+	while (i >= 0)
 	{
-		if (s[i] == (char)(c))
-		{
-			return ((char *)(s + i));
-		}
+		if (s[i] == ch)
+			return ((char *)s + i);
 		i--;
 	}
-	if (s[0] == (char)(c))
-	{
-		return ((char *)(s));
-	}
+	if (ch == '\0')
+		return ((char *)s + ft_strlen(s));
 	return (NULL);
 }
-// #include<stdio.h>
-// int	main(void)
-// {
-// 	//const char *tst="yasser benzidiya";
-// 	//char c = '\0';
-// 	printf("%s",ft_strrchr( "yasser benzidiya", 'e'));
-// }
+/*#include <stdio.h>
+int main()
+{
+	//printf("%s", ft_strrchr(NULL,'c'));
+	printf("%s", strrchr("yasser",'\0'));
+
+}*/

@@ -17,6 +17,8 @@ void	*ft_memset(void *ptr, int value, size_t numbyte)
 	unsigned char	*p1;
 	size_t			i;
 
+	if (!ptr)
+		return (NULL);
 	c = (unsigned char)value;
 	p1 = (unsigned char *)ptr;
 	i = 0;
@@ -27,15 +29,10 @@ void	*ft_memset(void *ptr, int value, size_t numbyte)
 	}
 	return (ptr);
 }
-
-// #include <stdio.h>
-
-// int	main(void) {
-// 	int a =  0;
-// 	ft_memset(&a,255,4);
-// 	ft_memset(&a,0b11111011,1);
-
-// 	printf("Before memset: %d\n", a);
-
-// 	return (0);
-// }
+/*int main()
+{
+	int a =0;
+	ft_memset(&a,0b00000000,3);
+	ft_memset((char *)&a+3,0b10000000,1);
+	printf("%d",a);
+}*/

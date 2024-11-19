@@ -12,39 +12,26 @@
 
 #include "libft.h"
 
+#include "libft.h"
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*ptr;
-	size_t	len;
-	int		start;
-	int		index;
+	size_t	len_s1;
+	size_t	len_s2;
+	char	*new_string;
 
-	len = 0;
-	start = 0;
-	index = 0;
-	if (!s1 || !s2)
+	if (!s1 && !s2)
 		return (NULL);
-	len = ft_strlen(s1) + ft_strlen(s2)+1;
-	ptr = (char *) malloc (len);
-	if (!ptr)
+	else if (!s1)
+		return (ft_strdup((char *)s2));
+	else if (!s2)
+		return (ft_strdup((char *)s1));
+	len_s1 = ft_strlen(s1);
+	len_s2 = ft_strlen(s2);
+	new_string = malloc(sizeof(char) * (len_s1 + len_s2 + 1));
+	if (!new_string)
 		return (NULL);
-	while (s1[start])
-	{
-		ptr[index++] = s1[start++];
-	}
-	start = 0;
-	while (s2[start])
-	{
-		ptr[index++] = s2[start++];
-	}
-	ptr[index] = '\0';
-	return (ptr);
+	ft_strlcpy(new_string, s1, len_s1 + 1);
+	ft_strlcpy(new_string + len_s1, s2, len_s2 + 1);
+	return (new_string);
 }
-/*#include <stdio.h>
-
-int	main(void)
-{
-	char *str;
-	str = ft_strjoin("\0", "benzidiya");
-	printf("%s", str);
-}*/

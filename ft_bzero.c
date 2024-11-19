@@ -16,17 +16,6 @@ void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }
-// #include <stdio.h>
-// int main()
-// {
-// 	char	str[]= "1337";
-// 	int		i;
-
-// 	ft_bzero(str+1, 2);
-// 	i = 0;
-// 	while (i < 4)
-// 	{
-// 		printf("str[%d] = %d (char: '%c')\n", i, str[i], str[i]);
-// 		i++;
-// 	}
-// }
+// adpt
+// n is declared as a size_t , bcs it adapts to the size of the architecture
+// unsigend long may vary in size depending on the architecture , but size_t is always the max size

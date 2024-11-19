@@ -18,6 +18,8 @@ char	*ft_strdup(char *src)
 	int		lentsrc;
 	int		i;
 
+	if (!src)
+		return (NULL);
 	lentsrc = ft_strlen(src) + 1;
 	dest = (char *)malloc(lentsrc);
 	if (!dest)
@@ -31,11 +33,3 @@ char	*ft_strdup(char *src)
 	dest[i] = '\0';
 	return (dest);
 }
-// #include <stdio.h>
-// int main ()
-// {
-// 	char array[] = "yasserbenzidiya";
-// 	printf("%s",ft_strdup(" "));
-// 	//printf("%s",strdup(" "));
-
-// }

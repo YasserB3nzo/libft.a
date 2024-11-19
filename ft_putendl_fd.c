@@ -17,6 +17,8 @@ void	ft_putendl_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
+	if (!s || fd < 0)
+		return ;
 	while (s[i])
 	{
 		write(fd, &s[i], 1);
@@ -24,3 +26,9 @@ void	ft_putendl_fd(char *s, int fd)
 	}
 	write(fd, "\n", 1);
 }
+/*int main()
+{
+	int fd  = open("test.txt",O_RDWR , 0644);
+	ft_putendl_fd("yasserbenzidiya",fd);
+	close(fd);
+}*/

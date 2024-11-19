@@ -18,26 +18,19 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	j;
 
 	i = 0;
-	if (!haystack && len == 0)
-		return (NULL);
+	j = 0;
 	if (!needle[0])
-		return ((char *)&haystack[i]);
+		return ((char *)(haystack));
 	while (haystack[i] && i < len)
 	{
 		j = 0;
-		while (haystack[i + j] == needle[j] && haystack[i + j] && i + j < len)
+		while (haystack[i + j] && haystack[i + j] == needle[j] && (i + j) < len)
+		{
 			j++;
-		if (needle[j] == '\0')
-			return ((char *)&haystack[i]);
+		}
+		if (!needle[j])
+			return ((char *)(haystack + i));
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
-
-// #include <stdio.h>
-// int	main(void) {
-// 	//char *str = "Hello, world!";
-// 	char *result = ft_strnstr("abcdefgh", "abc", 3);
-// 	printf("Found: %s\n", result);
-
-// }

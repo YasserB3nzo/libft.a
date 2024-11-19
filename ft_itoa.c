@@ -45,9 +45,9 @@ char	*ft_itoa(int n)
 
 	l = len_n(n);
 	ptr = (char *)malloc((l + 1) * sizeof(char));
-	num = check_sign(n);
 	if (!ptr)
 		return (NULL);
+	num = check_sign(n);
 	ptr[l] = '\0';
 	if (n == 0)
 	{
@@ -63,11 +63,8 @@ char	*ft_itoa(int n)
 	}
 	return (ptr);
 }
-
-// #include <stdio.h>
-// #include <stdlib.h>
-// #include <string.h>
-// int	main(void)
-// {
-// 	printf("%s",ft_itoa());
-// }
+// static are just hellper functions that are only used in the file they are declared in
+/*int main()
+{
+	printf("%s\n",ft_itoa(-5));
+}*/

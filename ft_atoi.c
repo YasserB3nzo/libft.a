@@ -11,35 +11,36 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int	ft_atoi(const char *nb)
+int ft_atoi(const char *nb)
 {
-	int		i;
-	int		sign;
-	int		res;
+    int i = 0;
+    int sign = 1;
+    unsigned long res = 0;
 
-	i = 0;
-	sign = 1;
-	res = 0;
-	while ((nb[i] >= 9 && nb[i] <= 13) || (nb[i] == 32))
-		i++;
-	if (nb[i] == '-' || nb[i] == '+')
-	{
-		if (nb[i] == '-')
-			sign *= -1;
-		i++;
-	}
-	while (ft_isdigit(nb[i]))
-	{
-		res = (res * 10) + (nb[i] - '0');
-		i++;
-	}
-	return (res * sign);
+    while ((nb[i] >= 9 && nb[i] <= 13) || (nb[i] == 32))
+        i++;
+    if (nb[i] == '-' || nb[i] == '+')
+    {
+        if (nb[i] == '-')
+            sign = -1;
+        i++;
+    }
+    while (ft_isdigit(nb[i]))
+    {
+        res = (res * 10) + (nb[i] - '0');
+        i++;
+    }
+    if(res > LONG_MAX)
+        return (0 - (sign == 1));
+    return (int)(res * sign);
 }
-
-// int	main(void)
-// {
-// 	printf("%d\n",ft_atoi(NULL));
-// 	//printf("%d",atoi(NULL));
-// }
+/*#include <stdio.h>
+int main()
+{
+    printf("%d\n",ft_atoi("22222222222222222222222222222"));
+    printf("%d",atoi("22222222222222222222222222222"));
+}*/
+// const char , tell the compiler to not modify the string and its for read access only
+// we declare res as long so we can handle the max value of int 
+// casting res to int to return it as int

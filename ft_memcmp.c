@@ -29,20 +29,7 @@ int	ft_memcmp(const void *ptr1, const void *ptr2, size_t num)
 	}
 	return (0);
 }
-
-// #include <stdio.h>
-// int main ()
-// {
-//   char buffer1[] = "yasser benzidiy";
-//   char buffer2[] = "yasser benzidiy";
-
-//   int n;
-
-//   n=ft_memcmp ( buffer1, buffer2, sizeof(buffer1) );
-
-//   if (n>0) printf ("'%s' is greater than '%s'.\n",buffer1,buffer2);
-//   else if (n<0) printf ("'%s' is less than '%s'.\n",buffer1,buffer2);
-//   else printf ("'%s' is the same as '%s'.\n",buffer1,buffer2);
-
-//   return (0);
-// }
+// so basiclly casting to unsigned char so the values greater then 127 are  not treated as negative values
+// bcs negativesvalues will lead to incorrect results
+// memcmp work with raw memory , so it compares the values at byte level
+// raw memory we mean data stored in the memory that doseant have any specific type , refers to byte par byte comparison
