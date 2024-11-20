@@ -34,6 +34,11 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		ft_memcpy(dst, src, len);
 	return (dst);
 }
+// it handells overlapp and preents over writing data that no been copied yet 
+// overlap ; when rwo or more ariable share the same memory location
+// memoryover lap can cause data corruption , umperdictable behaviour 
+// dest < src alors coopy from the begenning and moes forward 
+// the asci alue are presented in the memory in binary
 /*#include <stdio.h>
 int	main(void)
 {

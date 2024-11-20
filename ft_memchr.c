@@ -34,7 +34,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 // ptr is not const , bcs we need to modify it
 // ptr casted to char ro compare at bye level
 // why unsigned char , bcs values more then 127 will be treated as negative values
-//
+// it could leads to incoorect comparaison reslt
 /*#include <stdio.h>
 int main()
 {

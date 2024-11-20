@@ -27,7 +27,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (0);
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
-int main()
+/*int main()
 {
     char s1[] = { (char)200, '\0' }; // Signed char 200, which may be interpreted as -56
     char s2[] = { 200, '\0' };       // Unsigned char 200
@@ -36,4 +36,4 @@ int main()
     printf("Result without casting (signed): %d\n", result_signed);  // Might give incorrect result on systems where char is signed
 
     return 0;
-}
+}*/

@@ -32,6 +32,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!new_string)
 		return (NULL);
 	ft_strlcpy(new_string, s1, len_s1 + 1);
-	ft_strlcpy(new_string + len_s1, s2, len_s2 + 1);
+	//ft_strlcpy(new_string + len_s1, s2, len_s2 + 1);
+	ft_strlcat(new_string, s2, len_s2 + len_s1 + 1);
 	return (new_string);
 }
+

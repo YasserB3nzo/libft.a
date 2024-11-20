@@ -27,3 +27,6 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 }
 // *f is a pointer to a function
 // when we call afct we refer to the address of the function
+// fct pointer stores the adress of a function in mry
+// fct compiled and stored in code segemnt (txt) 
+//by calling f = it jump to the adress then the cpu run the fct 

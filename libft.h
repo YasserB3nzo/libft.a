@@ -56,9 +56,4 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
-struct s_list
-{
-    void			*content;
-    struct s_list	*next;
-};
 #endif
