@@ -29,7 +29,3 @@ int	ft_memcmp(const void *ptr1, const void *ptr2, size_t num)
 	}
 	return (0);
 }
-// so basiclly casting to unsigned char so the values greater then 127 are  not treated as negative values
-// bcs negativesvalues will lead to incorrect results
-// memcmp work with raw memory , so it compares the values at byte level
-// raw memory we mean data stored in the memory that doseant have any specific type , refers to byte par byte comparison

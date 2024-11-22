@@ -105,5 +105,3 @@ char	**ft_split(char const *s, char c)
 	ptr[count_words] = NULL;
 	return (ptr);
 }
-// stack for local variabl , the heap is dynamic , both can experience overlapp
-// 

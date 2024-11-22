@@ -63,8 +63,3 @@ char	*ft_itoa(int n)
 	}
 	return (ptr);
 }
-// static are just hellper functions that are only used in the file they are declared in
-/*int main()
-{
-	printf("%s\n",ft_itoa(-5));
-}*/

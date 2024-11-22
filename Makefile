@@ -28,13 +28,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean fclean re all
-
-#auto variables:predefiend variables in make that adapt dynamicly with assigned value
-#default rule is the first rule in make file 
-#the purpose of the default rule here is to create libft
-#the all is target and the depedency is libft , make will check if libft is up to date if not 
-#it will triger the rule that create and updt the libfta
-# the $ symbole refers to the variable , and no reason for them to be upper case 
-#make take the timeout into consedation when it comees to check if the libray is up to date or not 
-#when a phony targed is declared make ignore the timeout and excutes the assosiete commandes
+.PHONY: clean

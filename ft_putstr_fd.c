@@ -25,7 +25,3 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
-// when a file is opend or created using systeme call function m the os assigned a index to the file 
-//called file dis , and it acts as a reference to the file so we can preforme operation like read , write 
-// file des table are managed by the kernel, each process has a fdt
-// the files desc tab is a data struct that holds information about thr file 

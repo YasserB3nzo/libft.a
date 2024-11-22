@@ -29,10 +29,3 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)s + ft_strlen(s));
 	return (NULL);
 }
-/*#include <stdio.h>
-int main()
-{
-	//printf("%s", ft_strrchr(NULL,'c'));
-	printf("%s", strrchr("yasser",'\0'));
-
-}*/

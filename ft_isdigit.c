@@ -18,15 +18,3 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-/*int	ft_isdigit2(char c)
-{
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
-}
-#include <stdio.h>
-int main()
-{
-	printf("%d\n",ft_isdigit(305));
-	printf("%d\n",ft_isdigit2(305));
-}*/
